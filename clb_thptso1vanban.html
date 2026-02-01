@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLB THPT Số 1 Văn Bàn</title>
+    <style>
+        /* CSS RESET & CHUẨN HÓA */
+        * { box-sizing: border-box; transition: all 0.3s ease; }
+        body { 
+            font-family: 'Segoe UI', Roboto, Arial, sans-serif; 
+            margin: 0; padding: 0; 
+            background: #f4f7f6; 
+            color: #2d3436; 
+        }
+
+        /* THANH THÀNH VIÊN - ĐỊNH DẠNG ĐẸP */
+        .top-bar { 
+            background: #2d3436; 
+            color: #dfe6e9; 
+            padding: 10px; 
+            text-align: center;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+        .top-bar b { color: #fdcb6e; }
+
+        /* MENU ĐIỀU HƯỚNG */
+        nav { 
+            background: #0984e3; 
+            padding: 1rem; 
+            position: sticky; top: 0; 
+            z-index: 1000; 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        nav a { 
+            color: white; 
+            text-decoration: none; 
+            margin: 0 20px; 
+            font-weight: bold; 
+            text-transform: uppercase;
+        }
+        nav a:hover { color: #fdcb6e; }
+
+        /* CONTAINER CHÍNH */
+        .container { 
+            max-width: 1200px; 
+            margin: 2rem auto; 
+            background: white; 
+            padding: 2rem; 
+            border-radius: 20px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        /* BANNER */
+        .banner { 
+            width: 100%; 
+            height: 480px; 
+            border-radius: 15px; 
+            overflow: hidden; 
+            margin-bottom: 2rem;
+            border: 8px solid #f1f2f6;
+        }
+        .banner img { width: 100%; height: 100%; object-fit: cover; }
+        .banner:hover img { transform: scale(1.02); }
+
+        .main-title { 
+            text-align: center; 
+            color: #0984e3; 
+            font-size: 2.5rem; 
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+        }
+
+        /* GRID TIÊU CHÍ */
+        .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 3rem; }
+        .card { 
+            background: #f1f2f6; 
+            padding: 2rem; 
+            border-radius: 15px; 
+            text-align: center; 
+            border-bottom: 5px solid transparent;
+        }
+        .card:hover { border-bottom: 5px solid #d63031; transform: translateY(-5px); }
+        .card h3 { color: #d63031; margin-top: 0; }
+
+        /* BỐ CỤC NỘI DUNG */
+        .main-content { display: flex; gap: 40px; }
+        .sidebar { flex: 1; }
+        .sidebar h4 { background: #0984e3; color: white; padding: 15px; border-radius: 10px; margin-top: 0; }
+        .sidebar ul { list-style: none; padding: 0; }
+        .sidebar li { padding: 10px 0; border-bottom: 1px solid #eee; }
+        .sidebar a { text-decoration: none; color: #636e72; font-weight: 500; }
+        .sidebar a:hover { color: #0984e3; padding-left: 8px; }
+
+        .articles { flex: 3; }
+        
+        /* ẢNH HOẠT ĐỘNG */
+        .photo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 2rem; }
+        .photo-box { height: 320px; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
+        .photo-box img { width: 100%; height: 100%; object-fit: cover; }
+
+        .btn-join { 
+            background: #d63031; 
+            color: white; 
+            border: none; 
+            padding: 15px 35px; 
+            border-radius: 50px; 
+            font-weight: bold; 
+            cursor: pointer; 
+            font-size: 1.1rem;
+            margin-top: 1rem;
+        }
+        .btn-join:hover { background: #ee5253; box-shadow: 0 5px 15px rgba(214, 48, 49, 0.3); }
+
+        /* FOOTER */
+        footer { 
+            margin-top: 4rem; 
+            padding: 3rem; 
+            background: #2d3436; 
+            color: #dfe6e9; 
+            border-radius: 15px; 
+            display: grid; 
+            grid-template-columns: 1fr 1fr;
+        }
+        footer a { color: #74b9ff; text-decoration: none; }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">
+        NHÓM THỰC HIỆN: <b>LINH ĐAN | THỦY TIÊN | PHƯƠNG THẢO | HÀ LÊ</b>
+    </div>
+
+    <nav>
+        <a href="#">Trang Chủ</a>
+        <a href="#">Tin Tức</a>
+        <a href="#">Hoạt Động</a>
+        <a href="#">Liên Hệ</a>
+    </nav>
+
+    <div class="container">
+        <div class="banner">
+            <img src="https://scontent.fhan15-2.fna.fbcdn.net/v/t39.30808-6/555638348_1110122127934653_2718027599638123967_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=107&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=xzOi5nWFNsMQ7kNvwHkyBV0&_nc_oc=AdnWgrzm-TnF8HojQsXB6an9VyA8yHVQeWG4By7GXaPYDrvkd97YSBOLPwhv-ErudgKqDfRlGFbmXl0r5ahSzJYr&_nc_zt=23&_nc_ht=scontent.fhan15-2.fna&_nc_gid=PJ_b9UpBMFHEBYEI1qe0Cg&oh=00_AfsWyZX2j00akDc0WmkApx8Htpzp2Nx6PdA9T3VX1YLhYg&oe=6984923C.jpg" alt="Tập thể giáo viên">
+        </div>
+
+        <h1 class="main-title">Câu lạc bộ THPT Số 1 Văn Bàn</h1>
+
+        <div class="features">
+            <div class="card"><h3>⚡ Năng động</h3><p>Phong trào sôi nổi, bứt phá mọi giới hạn.</p></div>
+            <div class="card"><h3>🔥 Đam mê</h3><p>Nơi tài năng tỏa sáng rực rỡ nhất.</p></div>
+            <div class="card"><h3>✨ Kết nối</h3><p>Gắn kết những tâm hồn đồng điệu.</p></div>
+        </div>
+
+        <div class="main-content">
+            <aside class="sidebar">
+                <h4>DANH SÁCH CLB</h4>
+                <ul>
+                    <li><a href="#">⚽ CLB Bóng đá</a></li>
+                    <li><a href="#">🏐 CLB Bóng chuyền</a></li>
+                    <li><a href="#">🏸 CLB Cầu lông</a></li>
+                    <li><a href="#">🎤 CLB Văn nghệ</a></li>
+                    <li><a href="#">🥋 CLB Võ thuật</a></li>
+                </ul>
+            </aside>
+
+            <article class="articles">
+                <div class="photo-grid">
+                    <div class="photo-box">
+                        <img src="https://scontent.fhan15-1.fna.fbcdn.net/v/t39.30808-6/493174106_1322864989268861_8298356861883283746_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_ohc=kIP53lOcQzUQ7kNvwHS2Jlo&_nc_oc=Adnn3OppUb80KV5RfrDzSuhbYi6gt6elG4VvJU5Ss6u6vcGy7HOu_iK3-9rpaklhUy88KiccDiZZ23UczBSGnBUI&_nc_zt=23&_nc_ht=scontent.fhan15-1.fna&_nc_gid=1sD6OEybBHGoyUGXhZJyKw&oh=00_AfvkwJv2NQBW80j30CetBp6-lJJAK-lVkV5u3s1vR0gzbQ&oe=69848DC1.jpg" alt="Bóng Chuyền">
+                    </div>
+                    <div class="photo-box">
+                        <img src="https://scontent.fhan15-1.fna.fbcdn.net/v/t39.30808-6/492331559_1322864819268878_5132519235478751164_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_ohc=1-frIg4qOe8Q7kNvwFVx2-I&_nc_oc=Adnfn6sGz_Nyl3ww6GoSadxJmrTw1j3FCip4gDBNXuBNlPbAQPAjXZAkCBDU2v547sw5NWRUcATa3ohPGHRK-I1o&_nc_zt=23&_nc_ht=scontent.fhan15-1.fna&_nc_gid=EcGkEbkP1T1gy9nwG1Gzgw&oh=00_Afs_PCzTel0GlrjSLOofwIrvuPjWelXaTLcL3vVZjiPWcw&oe=6984B878.jpg" alt="Thể thao">
+                    </div>
+                </div>
+
+                <h2 style="color: #0984e3;">Chào mừng đến với CLB</h2>
+                <p>Khám phá không gian sáng tạo và năng động của <b>Trường THPT Số 1 Văn Bàn</b>. Đây là cơ hội để các bạn học sinh không chỉ học tập mà còn được rèn luyện thể chất và bộc lộ năng khiếu nghệ thuật tiềm ẩn.</p>
+                <p>Hãy cùng <b>Linh Đan, Thủy Tiên, Phương Thảo và Hà Lê</b> ghi lại những dấu ấn thanh xuân đẹp nhất dưới mái trường này nhé!</p>
+                
+                <button class="btn-join" onclick="dangKy()">Đăng ký tham gia ngay</button>
+            </article>
+        </div>
+
+        <footer>
+            <div>
+                <b>TRƯỜNG THPT SỐ 1 VĂN BÀN</b><br>
+                📍 Địa chỉ: Văn Bàn, Lào Cai
+            </div>
+            <div style="text-align: right;">
+                <b>LIÊN HỆ</b><br>
+                📞 0123.456.789 | <a href="#">Facebook Fanpage</a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://unpkg.com/magic-snowflakes/dist/snowflakes.min.js"></script>
+    <script>
+        // Tạo hiệu ứng tuyết
+        var snowflakes = new Snowflakes({ color: '#ffffff', count: 15 });
+
+        // Hàm thông báo đăng ký
+        function dangKy() {
+            alert("Cảm ơn bạn! Nhóm Linh Đan, Thủy Tiên, Phương Thảo, Hà Lê đã nhận được yêu cầu đăng ký của bạn.");
+        }
+    </script>
+</body>
+</html>
